@@ -14,6 +14,7 @@
     --fw-500: 500;
     --fw-600: 600;
 
+    --fs-very-small: 0.69125rem;
     --fs-small: 0.8125rem;
     --fs-base: 1rem;
     --fs-large: 1.25rem;
@@ -29,7 +30,7 @@
 }
 
 body {
-    font-size: var(--fs-base);
+    font-size: var(--fs-small);
     font-family: var(--ff-primary), sans-serif;
     background-color: hsl(var(--clr-neutral-light));
     line-height: 1.3;
@@ -50,7 +51,7 @@ h3 {
 
 .flex {
     display: flex;
-    gap: 1.25rem;
+    gap: 1.15rem;
     align-items: center;
 }
 
@@ -111,18 +112,20 @@ h3 {
 
 .testimonial {
     padding: 2rem;
-    box-shadow: 2rem 2rem 3rem -3rem hsl(var(--clr-secondary-light));
-    border-radius: var(--fs-small);
-    -webkit-border-radius: var(--fs-small);
-    -moz-border-radius: var(--fs-small);
-    -ms-border-radius: var(--fs-small);
-    -o-border-radius: var(--fs-small);
+    box-shadow: 1rem 1rem 3rem -3rem hsl(var(--clr-secondary-light));
+    border-radius: var(--fs-very-small);
+    -webkit-border-radius: var(--fs-very-small);
+    -moz-border-radius: var(--fs-very-small);
+    -ms-border-radius: var(--fs-very-small);
+    -o-border-radius: var(--fs-very-small);
 }
 
 .testimonial h3 {
-    font-size: calc(var(--fs-large) * 1.1);
-    margin: 1em 0;
-    line-height: 1.15;
+    font-size: var(--fs-large);
+    margin: 0.95rem 0;
+    line-height: 1.2;
+    opacity: 90%;
+    font-weight: var(--fw-500);
 }
 
 .quote-img {
@@ -132,8 +135,8 @@ h3 {
 }
 
 .testimonial-img {
-    width: 2.25rem;
-    height: 2.25rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -142,34 +145,47 @@ h3 {
 }
 
 .name {
-    font-size: var(--fs-base);
+    font-size: var(--fs-small);
 }
 
 .position {
-    font-size: var(--fs-small);
+    font-size: var(--fs-very-small);
     opacity: 50%;
 }
 
 .testimonial-quote {
+    font-weight: var(--fw-500);
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+    opacity: 60%;
+}
+
+/* 3 and 5 testimonials special stylings */
+
+.testimonial:nth-child(3) .testimonial-quote,
+.testimonial:nth-child(5) .testimonial-quote {
+    opacity: 40%;
+}
+
+.testimonial:nth-child(3) h2, 
+.testimonial:nth-child(3) h3,
+.testimonial:nth-child(5) h2,
+.testimonial:nth-child(5) h3 {
     opacity: 70%;
 }
+
+/* special border for 1 and 4 testimonials */
 
 .testimonial:nth-child(1) .testimonial-img,
 .testimonial:nth-child(4) .testimonial-img {
     border: 3px solid #a775f1;
 }
 
-.testimonial:nth-child(3) h3,
-.testimonial:nth-child(5) h3{
-    opacity: 70%;
-}
 
 /* footer */
 .attribution {
-    font-size: 0.8rem;
+    font-size: var(--fs-small);
     text-align: center;
-    background-color: #c1c1c1;
-    padding-block: 2em;
 }
 
 .attribution a {
@@ -203,4 +219,8 @@ h3 {
         "one one two five"
         "three four four five";
     }
+
+    .quote-img {
+        background-position: top right 18%;
+      }
 }
