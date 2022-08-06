@@ -186,6 +186,7 @@ h3 {
 .attribution {
     font-size: var(--fs-small);
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 .attribution a {
