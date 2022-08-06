@@ -123,7 +123,7 @@ h3 {
     -o-border-radius: var(--fs-very-small);
 }
 
-.testimonial h3 {
+.testimonial > p {
     font-size: var(--fs-large);
     margin: 0.95rem 0;
     line-height: 1.2;
@@ -171,9 +171,9 @@ h3 {
 }
 
 .testimonial:nth-child(3) h2, 
-.testimonial:nth-child(3) h3,
+.testimonial:nth-child(3) > p,
 .testimonial:nth-child(5) h2,
-.testimonial:nth-child(5) h3 {
+.testimonial:nth-child(5) > p {
     opacity: 70%;
 }
 
@@ -208,14 +208,14 @@ h3 {
 	}
 }
 
-/* @media (min-width: 780px) {
+@media (min-width: 780px) {
     .testimonial-grid {
         grid-template-areas: 
-        "one one two"
+        "one two"
         "three five"
         "four five";
     }
-} */
+}
 
 @media (min-width: 1024px) {
     .testimonial-grid {
